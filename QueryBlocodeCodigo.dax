@@ -1,0 +1,7 @@
+﻿MEASURE MEDIDAS[Media de visualizações] = AVERAGE('campanha bloco de código - Artigos'[Visualizações])
+MEASURE MEDIDAS[Percentual Pagos] = SUM('campanha bloco de código - Artigos'[Clicks pagos])/SUM('campanha bloco de código - Artigos'[Visualizações])
+MEASURE MEDIDAS[Percentual Pesquisas] = SUM('campanha bloco de código - Artigos'[Vezes pesquisados])/SUM('campanha bloco de código - Artigos'[Visualizações])
+MEASURE MEDIDAS[Percentual Rede Social] = SUM('campanha bloco de código - Artigos'[Clicks redes sociais])/[Total de Cliques]
+MEASURE MEDIDAS[Percentual Visitas Diretas] = SUM('campanha bloco de código - Artigos'[Visitas Diretas])/SUM('campanha bloco de código - Artigos'[Visualizações])
+MEASURE MEDIDAS[Total de Cliques] = SUM('campanha bloco de código - Artigos'[Clicks pagos])+SUM('campanha bloco de código - Artigos'[Clicks redes sociais])
+MEASURE MEDIDAS[CTR] = [Total de Cliques]/SUM('campanha bloco de código - Artigos'[Visualizações])
